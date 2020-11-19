@@ -1,12 +1,17 @@
 import LoginComponent from './component/Login';
 import NotFoundComponent from './component/NotFound';
 import RegisterComponent from './component/Register';
+import ReceipeDetailComponent from './component/ReciepeDetail';
+import ReceipeComponent from './component/Receipes';
+import HomeComponent from './component/Home';
+import './css/App.css';
 
 import {
   BrowserRouter as Router,
   Switch,
   Route
 } from "react-router-dom";
+
 
 
 function App() {
@@ -23,8 +28,14 @@ function App() {
           <Route path="/login">
             <LoginComponent />
           </Route>
+          <Route exact path="/receipes">
+            <ReceipeComponent name ="hello" />
+          </Route>
+          <Route path="/receipes/:id">
+            <ReceipeDetailComponent name ="hello" />
+          </Route>
           <Route exact path="/">
-            <LoginComponent />
+            <HomeComponent />
           </Route>
           <Route>
             <NotFoundComponent />

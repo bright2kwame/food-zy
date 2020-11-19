@@ -1,11 +1,10 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
-import '../App.css'
+import '../css/App.css'
 import '../css/Notfound.css'
 import {
   Link
 } from "react-router-dom";
-
 
 function NotFoundComponent() {
   return (
