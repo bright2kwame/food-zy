@@ -31,7 +31,7 @@ h2::after {
 	min-height: 340px;
 }
 .carousel .carousel-item a {
-	color: #eb7245;
+	color: #047BFE;
 }
 .carousel .img-box {
 	width: 145px;
@@ -59,42 +59,38 @@ h2::after {
 	display: block;	
 	padding-bottom: 5px;
 }
-.carousel .star-rating i {
-	font-size: 18px;
-	color: #ffdc12;
+
+.home-wrapper {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
 }
-.carousel-control-prev, .carousel-control-next {
-	width: 30px;
-	height: 30px;
-	border-radius: 50%;
-	background: #999;
-	text-shadow: none;
-	top: 4px;
+
+.home-wrapper button a{
+    background-color: white;
+    color: black;
+    border: 1px solid #047BFE; 
+    border-radius: 2px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: 10px;
+    text-transform: uppercase;
 }
-.carousel-control-prev i, .carousel-control-next i {
-	font-size: 20px;
-	margin-right: 2px;
-}
-.carousel-control-prev {
-	left: auto;
-	right: 40px;
-}
-.carousel-control-next i {
-	margin-right: -2px;
-}
-.carousel .carousel-indicators {
-	bottom: 15px;
-}
-.carousel-indicators li, .carousel-indicators li.active {
-	width: 11px;
-	height: 11px;
-	margin: 1px 5px;
-	border-radius: 50%;
-}
-.carousel-indicators li {	
-	background: #e2e2e2;
-	border: none;
-}
-.carousel-indicators li.active {		
-	background: #888;		
+
+.home-wrapper button a:hover{
+    background-color: white;
+    color: #047BFE;
+    border: 1px solid #047BFE; 
+    border-radius: 2px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-decoration: none;
+    font-size: 10px;
+    text-transform: uppercase;
 }

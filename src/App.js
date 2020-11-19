@@ -4,6 +4,7 @@ import RegisterComponent from './component/Register';
 import ReceipeDetailComponent from './component/ReciepeDetail';
 import ReceipeComponent from './component/Receipes';
 import HomeComponent from './component/Home';
+import HomeBaseComponent from './component/HomeBase';
 import './css/App.css';
 
 import {
@@ -11,7 +12,6 @@ import {
   Switch,
   Route
 } from "react-router-dom";
-
 
 
 function App() {
@@ -36,6 +36,9 @@ function App() {
           </Route>
           <Route exact path="/">
             <HomeComponent />
+          </Route>
+          <Route path="/test">
+            <HomeBaseComponent />
           </Route>
           <Route>
             <NotFoundComponent />

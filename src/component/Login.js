@@ -3,27 +3,37 @@ import 'bootstrap/dist/css/bootstrap.css';
 import '../css/App.css'
 import '../css/Login.css'
 
+//MARK: handle component 
 function LoginComponent(props) {
-    let emailInput = React.createRef();
-    let passswordInput = React.createRef();
+    const [state, setState] = React.useState({
+        email: "",
+        password: ""
+    })
+
+    // let emailInput = React.createRef();
+    // let passswordInput = React.createRef();
 
     //MARK: declared variables
-    let password = "";
-    let email = "";
+    // let password = "";
+    // let email = "";
 
     //MARK: start logging user in here    
-    function startLogin(e){
-        e.preventDefault();
-        alert("Email Action: "  + email + " Password Action: " + password);
+    function startLogin(event){
+        event.preventDefault();
+        alert("Email Action: "  + state.email + " Password Action: " + state.password);
     };
 
     //MARK: start logging input change
-    function onInputChanged(e){
-        email = emailInput.current.value
-        password = passswordInput.current.value
-        console.log("Logging Email: " + email +  " Password: " + password)
+    function onInputChanged(event){
+       console.log("PASSING: " + event.target.name)
+       setState({
+        ...state,
+         [event.target.name]: event.target.value
+        });
+        console.log("Logging Email: " + state.email +  " Password: " + state.password)
     };
 
+    //MARK: component html section
   return (
     <div className ="content-wrapper container text-center">
       <div className="login-form">
@@ -31,20 +41,20 @@ function LoginComponent(props) {
             <h3 className="text-center">Log in</h3>       
             <div className="form-group">
                 <input 
-                id="email"
                 name="email"
                 type="email" 
-                ref = {emailInput}
+                //ref = {emailInput}
+                value = {state.email}
                 onChange = {onInputChanged}
                 className="form-control" 
                 placeholder="Email Address" required="required"/>
             </div>
             <div className="form-group">
                 <input 
-                    id="password"
                     name="password"
                     type="password" 
-                    ref = {passswordInput}
+                  //  ref = {passswordInput}
+                    value = {state.password}
                     onChange = {onInputChanged}
                 className="form-control" placeholder="Password" required="required"/>
             </div>

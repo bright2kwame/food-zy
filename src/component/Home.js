@@ -1,7 +1,6 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
 import '../css/App.css'
-import '../css/Notfound.css'
 import '../css/Home.css'
 import {
   Link
@@ -9,7 +8,7 @@ import {
 
 function HomeComponent() {
   return (
-    <div>
+    <div className="home-wrapper">
        <h2>We Love FoodZy</h2>
         <div id="myCarousel" className="carousel slide" data-ride="carousel">  
         <div className="carousel-inner">		
@@ -28,7 +27,7 @@ function HomeComponent() {
                 </div>
             </div>
         </div>
-        <div className="text-center"><button className="btn btn-default"><Link to="/login">Login</Link></button> <button className="btn btn-primary"><Link to="/register">Create Account</Link></button></div>
+        <div className="text-center"><button className="btn btn-default"><Link to="/login">LOGIN</Link></button> <button className="btn btn-default"><Link to="/register">NEW ACCOUNT</Link></button></div>
         </div>
     </div>
   );
