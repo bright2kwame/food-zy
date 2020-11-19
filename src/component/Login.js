@@ -2,6 +2,7 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
 import '../css/App.css'
 import '../css/Login.css'
+import { Link } from 'react-router-dom';
 
 //MARK: handle component 
 function LoginComponent(props) {
@@ -9,18 +10,13 @@ function LoginComponent(props) {
         email: "",
         password: ""
     })
-
-    // let emailInput = React.createRef();
-    // let passswordInput = React.createRef();
-
-    //MARK: declared variables
-    // let password = "";
-    // let email = "";
-
     //MARK: start logging user in here    
     function startLogin(event){
         event.preventDefault();
-        alert("Email Action: "  + state.email + " Password Action: " + state.password);
+        let emailToPost = state.email;
+        let passwordToPost = state.password;
+
+        alert("Email Action: "  + emailToPost + " Password Action: " + passwordToPost);
     };
 
     //MARK: start logging input change
@@ -37,7 +33,7 @@ function LoginComponent(props) {
   return (
     <div className ="content-wrapper container text-center">
       <div className="login-form">
-      <form >
+      <form>
             <h3 className="text-center">Log in</h3>       
             <div className="form-group">
                 <input 
@@ -63,10 +59,10 @@ function LoginComponent(props) {
             </div>
             <div className="clearfix">
                 <label className="float-left form-check-label"><input type="checkbox"/> Remember me</label>
-                <a href="#" className="float-right">Forgot Password?</a>
+                <Link className="float-right">Forgot Password?</Link>
             </div>        
         </form>
-       <p className="text-center"><a href="#">Create an Account</a></p>
+       <p className="text-center"> New Here ? <Link to="/register" >Create an Account</Link></p>
     </div>
     </div>
   );
